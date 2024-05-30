@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="RTC_AM_PM_Definitions"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="RTC_AM_PM_Definitions"/>
+			<item value="sce"/>
+			<item value="tim2OC_Init"/>
+			<item value="RCC_AHB_Clock_Source "/>
+			<item value="exti0"/>
+			<item value="RCC_RTC_Clock_Source"/>
+			<item value="RTC_Hour_Formats"/>
+			<item value="irq"/>
+			<item value="mcoconfig"/>
+			<item value="mco"/>
+			<item value="INIT("/>
+			<item value="INIT"/>
+			<item value="period"/>
+			<item value="handler"/>
+			<item value="TX"/>
+		</list>
+		<list key="replacehistory">
+			<item value="tim4OC_Init"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1158"/>
+		<item key="DIALOG_Y_ORIGIN" value="379"/>
+		<item key="DIALOG_WIDTH" value="511"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

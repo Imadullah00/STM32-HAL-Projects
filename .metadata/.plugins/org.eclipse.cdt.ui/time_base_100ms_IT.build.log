@@ -1,0 +1,10 @@
+23:04:47 **** Incremental Build of configuration Debug for project time_base_100ms_IT ****
+make -j8 all 
+arm-none-eabi-size  time_base_100ms_IT.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4032	     20	   1644	   5696	   1640	time_base_100ms_IT.elf
+Finished building: default.size.stdout
+ 
+
+23:04:48 Build Finished. 0 errors, 0 warnings. (took 543ms)
+

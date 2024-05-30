@@ -1,0 +1,10 @@
+00:53:38 **** Incremental Build of configuration Debug for project WFE_1 ****
+make -j8 all 
+arm-none-eabi-size  WFE_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23652	    500	   1980	  26132	   6614	WFE_1.elf
+Finished building: default.size.stdout
+ 
+
+00:53:38 Build Finished. 0 errors, 0 warnings. (took 543ms)
+

@@ -1,0 +1,7 @@
+../Core/Src/WFE_main.c:23:5:main	64	static,ignoring_inline_asm
+../Core/Src/WFE_main.c:72:6:SystemClock_Config_HSE	96	static
+../Core/Src/WFE_main.c:157:6:Error_Handler	4	static
+../Core/Src/WFE_main.c:162:6:UART2_Init	8	static
+../Core/Src/WFE_main.c:179:6:GPIO_Analog_Config	32	static
+../Core/Src/WFE_main.c:192:6:GPIO_Init	32	static
+../Core/Src/WFE_main.c:211:6:HAL_GPIO_EXTI_Callback	16	static

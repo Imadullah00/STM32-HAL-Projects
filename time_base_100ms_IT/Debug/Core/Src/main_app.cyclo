@@ -1,0 +1,6 @@
+../Core/Src/main_app.c:13:5:main	1
+../Core/Src/main_app.c:32:6:SystemClockConfig	1
+../Core/Src/main_app.c:39:6:Error_Handler	1
+../Core/Src/main_app.c:44:6:GPIO_Init	1
+../Core/Src/main_app.c:55:6:TIMER_Init	2
+../Core/Src/main_app.c:67:6:HAL_TIM_PeriodElapsedCallback	1

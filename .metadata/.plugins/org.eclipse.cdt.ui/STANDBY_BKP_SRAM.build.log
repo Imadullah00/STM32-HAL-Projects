@@ -1,0 +1,10 @@
+18:33:18 **** Incremental Build of configuration Debug for project STANDBY_BKP_SRAM ****
+make -j8 all 
+arm-none-eabi-size  STANDBY_BKP_SRAM.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24348	    476	   1980	  26804	   68b4	STANDBY_BKP_SRAM.elf
+Finished building: default.size.stdout
+ 
+
+18:33:18 Build Finished. 0 errors, 0 warnings. (took 550ms)
+

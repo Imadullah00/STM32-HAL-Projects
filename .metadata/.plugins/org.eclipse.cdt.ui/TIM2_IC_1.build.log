@@ -1,0 +1,134 @@
+19:14:32 **** Incremental Build of configuration Debug for project TIM2_IC_1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main_app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main_app.d" -MT"Core/Src/main_app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main_app.o"
+arm-none-eabi-gcc "../Core/Src/msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/msp.d" -MT"Core/Src/msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/msp.o"
+../Core/Src/msp.c:54:24: error: unknown type name 'UART_HandleTypeDef'; did you mean 'HCD_HandleTypeDef'?
+   54 |  void HAL_UART_MspInit(UART_HandleTypeDef *huart)
+      |                        ^~~~~~~~~~~~~~~~~~
+      |                        HCD_HandleTypeDef
+make: *** [Core/Src/subdir.mk:34: Core/Src/msp.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main_app.c:18:1: error: unknown type name 'UART_HandleTypeDef'; did you mean 'HCD_HandleTypeDef'?
+   18 | UART_HandleTypeDef huart2;
+      | ^~~~~~~~~~~~~~~~~~
+      | HCD_HandleTypeDef
+../Core/Src/main_app.c: In function 'main':
+../Core/Src/main_app.c:64:25: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   64 |                         sprintf(msg, " Applied signal frequency is : %lf \r \n", signal_freq);
+      |                         ^~~~~~~
+../Core/Src/main_app.c:5:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    4 | #include "main_app.h"
+  +++ |+#include <stdio.h>
+    5 | 
+../Core/Src/main_app.c:64:25: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   64 |                         sprintf(msg, " Applied signal frequency is : %lf \r \n", signal_freq);
+      |                         ^~~~~~~
+../Core/Src/main_app.c:64:25: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main_app.c:66:25: warning: implicit declaration of function 'HAL_UART_Transmit'; did you mean 'HAL_SPI_Transmit'? [-Wimplicit-function-declaration]
+   66 |                         HAL_UART_Transmit(&huart2, msg, strlen(msg), HAL_MAX_DELAY);
+      |                         ^~~~~~~~~~~~~~~~~
+      |                         HAL_SPI_Transmit
+../Core/Src/main_app.c:68:39: error: 'FLASE' undeclared (first use in this function); did you mean 'FLASH'?
+   68 |                         is_captured = FLASE;
+      |                                       ^~~~~
+      |                                       FLASH
+../Core/Src/main_app.c:68:39: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main_app.c: In function 'UART2_Init':
+../Core/Src/main_app.c:208:15: error: request for member 'Instance' in something not a structure or union
+  208 |         huart2.Instance = USART2;
+      |               ^
+../Core/Src/main_app.c:209:15: error: request for member 'Init' in something not a structure or union
+  209 |         huart2.Init.BaudRate = 115200;
+      |               ^
+../Core/Src/main_app.c:210:15: error: request for member 'Init' in something not a structure or union
+  210 |         huart2.Init.WordLength = UART_WORDLENGTH_8B;
+      |               ^
+../Core/Src/main_app.c:210:34: error: 'UART_WORDLENGTH_8B' undeclared (first use in this function)
+  210 |         huart2.Init.WordLength = UART_WORDLENGTH_8B;
+      |                                  ^~~~~~~~~~~~~~~~~~
+../Core/Src/main_app.c:211:15: error: request for member 'Init' in something not a structure or union
+  211 |         huart2.Init.StopBits = UART_STOPBITS_1;
+      |               ^
+../Core/Src/main_app.c:211:32: error: 'UART_STOPBITS_1' undeclared (first use in this function)
+  211 |         huart2.Init.StopBits = UART_STOPBITS_1;
+      |                                ^~~~~~~~~~~~~~~
+../Core/Src/main_app.c:212:15: error: request for member 'Init' in something not a structure or union
+  212 |         huart2.Init.Parity = UART_PARITY_NONE;
+      |               ^
+../Core/Src/main_app.c:212:30: error: 'UART_PARITY_NONE' undeclared (first use in this function)
+  212 |         huart2.Init.Parity = UART_PARITY_NONE;
+      |                              ^~~~~~~~~~~~~~~~
+../Core/Src/main_app.c:213:15: error: request for member 'Init' in something not a structure or union
+  213 |         huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+      |               ^
+../Core/Src/main_app.c:213:33: error: 'UART_HWCONTROL_NONE' undeclared (first use in this function)
+  213 |         huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+      |                                 ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main_app.c:214:15: error: request for member 'Init' in something not a structure or union
+  214 |         huart2.Init.Mode = UART_MODE_TX_RX;
+      |               ^
+../Core/Src/main_app.c:214:28: error: 'UART_MODE_TX_RX' undeclared (first use in this function)
+  214 |         huart2.Init.Mode = UART_MODE_TX_RX;
+      |                            ^~~~~~~~~~~~~~~
+../Core/Src/main_app.c:216:13: warning: implicit declaration of function 'HAL_UART_Init'; did you mean 'HAL_HCD_Init'? [-Wimplicit-function-declaration]
+  216 |         if( HAL_UART_Init(&huart2) != HAL_OK)
+      |             ^~~~~~~~~~~~~
+      |             HAL_HCD_Init
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main_app.h:7,
+                 from ../Core/Src/main_app.c:1:
+../Core/Src/main_app.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1412:52: error: invalid type argument of '->' (have 'TIM_HandleTypeDef')
+ 1412 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1) :\
+      |                                                    ^~
+../Core/Src/main_app.c:279:37: note: in expansion of macro '__HAL_TIM_GET_COMPARE'
+  279 |                         in_cap[0] = __HAL_TIM_GET_COMPARE(htimer2, TIM_CHANNEL_1);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1413:52: error: invalid type argument of '->' (have 'TIM_HandleTypeDef')
+ 1413 |    ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2) :\
+      |                                                    ^~
+../Core/Src/main_app.c:279:37: note: in expansion of macro '__HAL_TIM_GET_COMPARE'
+  279 |                         in_cap[0] = __HAL_TIM_GET_COMPARE(htimer2, TIM_CHANNEL_1);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1414:52: error: invalid type argument of '->' (have 'TIM_HandleTypeDef')
+ 1414 |    ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3) :\
+      |                                                    ^~
+../Core/Src/main_app.c:279:37: note: in expansion of macro '__HAL_TIM_GET_COMPARE'
+  279 |                         in_cap[0] = __HAL_TIM_GET_COMPARE(htimer2, TIM_CHANNEL_1);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1415:17: error: invalid type argument of '->' (have 'TIM_HandleTypeDef')
+ 1415 |    ((__HANDLE__)->Instance->CCR4))
+      |                 ^~
+../Core/Src/main_app.c:279:37: note: in expansion of macro '__HAL_TIM_GET_COMPARE'
+  279 |                         in_cap[0] = __HAL_TIM_GET_COMPARE(htimer2, TIM_CHANNEL_1);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1412:52: error: invalid type argument of '->' (have 'TIM_HandleTypeDef')
+ 1412 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1) :\
+      |                                                    ^~
+../Core/Src/main_app.c:285:37: note: in expansion of macro '__HAL_TIM_GET_COMPARE'
+  285 |                         in_cap[1] = __HAL_TIM_GET_COMPARE(htimer2, TIM_CHANNEL_1);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1413:52: error: invalid type argument of '->' (have 'TIM_HandleTypeDef')
+ 1413 |    ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2) :\
+      |                                                    ^~
+../Core/Src/main_app.c:285:37: note: in expansion of macro '__HAL_TIM_GET_COMPARE'
+  285 |                         in_cap[1] = __HAL_TIM_GET_COMPARE(htimer2, TIM_CHANNEL_1);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1414:52: error: invalid type argument of '->' (have 'TIM_HandleTypeDef')
+ 1414 |    ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3) :\
+      |                                                    ^~
+../Core/Src/main_app.c:285:37: note: in expansion of macro '__HAL_TIM_GET_COMPARE'
+  285 |                         in_cap[1] = __HAL_TIM_GET_COMPARE(htimer2, TIM_CHANNEL_1);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1415:17: error: invalid type argument of '->' (have 'TIM_HandleTypeDef')
+ 1415 |    ((__HANDLE__)->Instance->CCR4))
+      |                 ^~
+../Core/Src/main_app.c:285:37: note: in expansion of macro '__HAL_TIM_GET_COMPARE'
+  285 |                         in_cap[1] = __HAL_TIM_GET_COMPARE(htimer2, TIM_CHANNEL_1);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main_app.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+19:14:32 Build Failed. 26 errors, 4 warnings. (took 594ms)
+

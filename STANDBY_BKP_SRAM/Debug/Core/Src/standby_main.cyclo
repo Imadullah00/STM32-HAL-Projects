@@ -1,0 +1,7 @@
+../Core/Src/standby_main.c:26:6:printmsg	1
+../Core/Src/standby_main.c:36:5:main	5
+../Core/Src/standby_main.c:112:6:SystemClock_Config_HSE	7
+../Core/Src/standby_main.c:197:6:Error_Handler	1
+../Core/Src/standby_main.c:202:6:UART2_Init	2
+../Core/Src/standby_main.c:219:6:GPIO_Analog_Config	1
+../Core/Src/standby_main.c:232:6:GPIO_Init	1

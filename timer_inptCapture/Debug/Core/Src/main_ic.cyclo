@@ -1,0 +1,9 @@
+../Core/Src/main_ic.c:33:5:main	3
+../Core/Src/main_ic.c:92:6:SystemClockConfig	9
+../Core/Src/main_ic.c:207:6:Error_Handler	1
+../Core/Src/main_ic.c:212:6:GPIO_Init	1
+../Core/Src/main_ic.c:222:6:UART2_Init	2
+../Core/Src/main_ic.c:240:6:TIMER2_Init	3
+../Core/Src/main_ic.c:264:6:TIMER6_Init	2
+../Core/Src/main_ic.c:277:6:LSE_Config	1
+../Core/Src/main_ic.c:296:6:HAL_TIM_IC_CaptureCallback	4

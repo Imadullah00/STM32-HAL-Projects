@@ -1,0 +1,6 @@
+../Core/Src/main_pwm_led.c:22:5:main	16	static
+../Core/Src/main_pwm_led.c:64:6:SystemClock_Config_HSE	96	static
+../Core/Src/main_pwm_led.c:153:6:Error_Handler	4	static
+../Core/Src/main_pwm_led.c:159:6:UART2_Init	8	static
+../Core/Src/main_pwm_led.c:177:6:TIM2_Init	40	static
+../Core/Src/main_pwm_led.c:203:6:GPIO_Init	32	static

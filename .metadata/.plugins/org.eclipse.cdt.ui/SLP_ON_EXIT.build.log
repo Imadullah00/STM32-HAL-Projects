@@ -1,0 +1,17 @@
+23:06:26 **** Build of configuration Debug for project SLP_ON_EXIT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/slp_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/slp_it.d" -MT"Core/Src/slp_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/slp_it.o"
+arm-none-eabi-gcc -o "SLP_ON_EXIT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MCU2-Udemy Course\My_Workspace\MasteringMCU2_WS\SLP_ON_EXIT\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SLP_ON_EXIT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SLP_ON_EXIT.elf
+ 
+arm-none-eabi-size  SLP_ON_EXIT.elf 
+arm-none-eabi-objdump -h -S SLP_ON_EXIT.elf  > "SLP_ON_EXIT.list"
+   text	   data	    bss	    dec	    hex	filename
+   8324	     60	   1716	  10100	   2774	SLP_ON_EXIT.elf
+Finished building: default.size.stdout
+ 
+Finished building: SLP_ON_EXIT.list
+ 
+
+23:06:29 Build Finished. 0 errors, 0 warnings. (took 2s.727ms)
+

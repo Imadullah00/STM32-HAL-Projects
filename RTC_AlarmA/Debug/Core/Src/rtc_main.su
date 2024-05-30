@@ -1,0 +1,13 @@
+../Core/Src/rtc_main.c:31:6:printmsg	96	static
+../Core/Src/rtc_main.c:42:5:main	8	static
+../Core/Src/rtc_main.c:81:6:SystemClock_Config_HSE	96	static
+../Core/Src/rtc_main.c:166:6:Error_Handler	4	static
+../Core/Src/rtc_main.c:171:6:UART2_Init	8	static
+../Core/Src/rtc_main.c:189:6:GPIO_Init	56	static
+../Core/Src/rtc_main.c:216:6:RTC_Init	8	static
+../Core/Src/rtc_main.c:232:6:RTC_Calendar_Config	32	static
+../Core/Src/rtc_main.c:260:6:HAL_GPIO_EXTI_Callback	64	static
+../Core/Src/rtc_main.c:281:6:RTC_Alarm_Config	48	static
+../Core/Src/rtc_main.c:307:7:getDayofWeek	56	static
+../Core/Src/rtc_main.c:314:7:getAM_PM	24	static
+../Core/Src/rtc_main.c:321:6:HAL_RTC_AlarmAEventCallback	40	static

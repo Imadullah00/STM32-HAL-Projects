@@ -1,0 +1,17 @@
+14:21:57 **** Incremental Build of configuration Debug for project CAN_Example_IT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/CAN_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/CAN_main.d" -MT"Core/Src/CAN_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/CAN_main.o"
+arm-none-eabi-gcc -o "CAN_Example_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MCU2-Udemy Course\My_Workspace\MasteringMCU2_WS\CAN_Example_IT\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CAN_Example_IT.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CAN_Example_IT.elf
+ 
+arm-none-eabi-size  CAN_Example_IT.elf 
+arm-none-eabi-objdump -h -S CAN_Example_IT.elf  > "CAN_Example_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  27820	    476	   2020	  30316	   766c	CAN_Example_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: CAN_Example_IT.list
+ 
+
+14:21:59 Build Finished. 0 errors, 0 warnings. (took 1s.822ms)
+
