@@ -1,0 +1,1 @@
+This repository lists the projects I took up using the STM32 CUBEIDE HAL layer. It incldes projects using multiple peripherals including UART, CAN, RTC. It also includes exercises on power saving modes of the ARM Cortex processor and those specific to the STM32F407VG processor. It also features projects on the TIMER Peripherals of the MCU.
