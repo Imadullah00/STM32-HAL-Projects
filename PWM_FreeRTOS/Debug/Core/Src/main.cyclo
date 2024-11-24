@@ -1,0 +1,13 @@
+../Core/Src/main.c:101:6:map	3
+../Core/Src/main.c:115:6:change_pwm_duty_cycle	4
+../Core/Src/main.c:121:6:HAL_GPIO_EXTI_Callback	1
+../Core/Src/main.c:139:5:main	5
+../Core/Src/main.c:257:6:SystemClock_Config	3
+../Core/Src/main.c:299:13:MX_I2C1_Init	2
+../Core/Src/main.c:333:13:MX_TIM2_Init	7
+../Core/Src/main.c:397:13:MX_GPIO_Init	1
+../Core/Src/main.c:541:6:StartDefaultTask	1
+../Core/Src/main.c:559:6:sensor_read_task	2
+../Core/Src/main.c:600:6:pwm_control_task	2
+../Core/Src/main.c:652:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:671:6:Error_Handler	1
